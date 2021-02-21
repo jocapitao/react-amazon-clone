@@ -1,11 +1,27 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import Header from "./header/Header";
+import Home from "./home/Home";
 import "./App.css";
+import Checkout from "./checkout/Checkout";
 
-type AppProps = {};
-
-const App: FunctionComponent<AppProps> = () => {
-  return <div className="app">Hello world</div>;
+const App = () => {
+  return (
+    <div className="app">
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/checkout">
+            <Checkout />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default App;

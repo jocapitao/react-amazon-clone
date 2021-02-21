@@ -1,0 +1,15 @@
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__nav > a > .header__option__basket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header__nav > a > .header__option__basket > .header__basket__count {
+  margin-left: 10px;
+  margin-right: 10px;
+}
